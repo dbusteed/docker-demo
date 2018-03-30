@@ -1,0 +1,29 @@
+# docker demo
+
+* installation --> skip
+* docker run hello-world
+    explain the parts
+    ubuntu thing too
+    python:2
+* show hub.docker
+    different images and stuffs
+* run nginx (docker run --name dev-server -p 4000:80 -d nginx)
+    for testing purposes, lots quicker than download for every server
+    do apache real quick --> (docker run -dit --name dev-server-2 -p 5000:80 httpd:2.4)
+* make our own image
+    * python scraping shell
+    * add script, change cmd, rebuild
+* make our own service
+    git clone blankdmp and open in Code
+    make
+        requirements.txt
+        Dockerfile
+        docker-compose.yml
+    docker-compose up
+    
+    
+## lil cmds    
+    * docker inspect  -f "{{.Name}} {{.Config.Cmd}}" $(docker ps -a -q)
+    * docker kill $(docker ps -q)
+    * docker rm $(docker ps -a -q)
+    * docker rmi $(docker images -q)

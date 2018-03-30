@@ -1,0 +1,4 @@
+django
+django_mako_plus
+psycopg2
+brule
